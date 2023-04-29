@@ -19,7 +19,7 @@
 
 <!-- Google Analytics -->
 {% if site.google-analytics %}
-<script>
+<!-- <script>
   var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
   if (dnt != "1" && dnt != "yes") {
     (function (i, s, o, g, r, a, m) {
@@ -44,5 +44,14 @@
     ga("create", "{{ site.google-analytics.id }}", "auto");
     ga("send", "pageview");
   }
+</script> -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L517YLLWP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L517YLLWP2');
 </script>
 {% endif %}

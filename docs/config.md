@@ -19,11 +19,11 @@
   * Usernames or ids can usually be taken from your profile links
   * If you do not use one of the following websites, then leave it empty
   * e.g. since I don't blog on dev.to or have Twitter my configs are like this:
-    * `github_username`: **longpdo**
-    * `codepen_username`: **longpdo**
-    * `dev_username`:
-    * `linkedin_username`: **longpdo**
-    * `twitter_username`:
+    * `github_username`: **ashirborah**
+    <!-- * `codepen_username`: **longpdo** -->
+    <!-- * `dev_username`: -->
+    * `linkedin_username`: **ashirborah**
+    * `twitter_username`: **ashirborah**
 
 ## About Me Section
 

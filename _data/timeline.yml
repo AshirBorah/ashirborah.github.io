@@ -15,7 +15,7 @@
     - tag: Data Science
     - tag: Wet Lab Research
     - tag: Machine Learning
-  timeline-side: right
+  timeline-side: left
 
 - title: Cancer Dependency Map, Broad Institute of MIT and Harvard
   title-url: https://depmap.org
@@ -25,13 +25,13 @@
     - tag: Machine Learning
     - tag: Cancer Data Science
     - tag: CRISPR Screens
-  timeline-side: left
+  timeline-side: right
 
 - title: Dickinson College
   title-url: https://www.dickinson.edu/
-  date: 2015 - 2019
+  date: 2018 - 2019
   subtitle: Computational Research Assistant
-  timeline-side: right
+  timeline-side: left
 
 - title: Dickinson College
   title-url: https://www.dickinson.edu/
@@ -41,4 +41,14 @@
     - tag: Genetic Algorithms
     - tag: Artificial Intelligence
     - tag: Numerical Optimization
+  timeline-side: right
+
+  - title: Dickinson College
+  title-url: https://www.dickinson.edu/
+  date: Sep 2016 - Mar 2019
+  subtitle: Teaching Assistant
+  tags:
+    - tag: Computer Algorithms
+    - tag: Data Structures
+    - tag: Calculus
   timeline-side: left
