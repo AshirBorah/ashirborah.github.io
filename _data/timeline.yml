@@ -31,6 +31,10 @@
   title-url: https://www.dickinson.edu/
   date: 2018 - 2019
   subtitle: Computational Research Assistant
+    tags:
+    - tag: RNAseq Analysis
+    - tag: Acute Myeloid Leukemia
+    - tag: HL60 Cell Line
   timeline-side: left
 
 - title: Dickinson College
@@ -43,7 +47,7 @@
     - tag: Numerical Optimization
   timeline-side: right
 
-  - title: Dickinson College
+- title: Dickinson College
   title-url: https://www.dickinson.edu/
   date: Sep 2016 - Mar 2019
   subtitle: Teaching Assistant
