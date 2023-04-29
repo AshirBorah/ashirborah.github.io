@@ -5,57 +5,40 @@
 # > tags: List of tags you want to associate with the entry
 # > timeline-side: The side on which you want to display the entry: left or right
 
-# Example of a timeline entry
-# - title: airbnb
-#   title-url: https://example.com/
-#   date: Sep 2019 - Present
-#   subtitle: Fullstack Developer
-#   tags:
-#     - tag: React
-#     - tag: Javascript
-#     - tag: Ruby
-#     - tag: Rails
-#   timeline-side: right
 
-- title: airbnb
-  title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
+- title: University of California, San Francisco
+  title-url: https://www.ucsf.edu/
+  date: Sep 2022 - Present
+  subtitle: PhD in Bioinformatics
   tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
+    - tag: Bioinformatics
+    - tag: Data Science
+    - tag: Wet Lab Research
+    - tag: Machine Learning
   timeline-side: right
 
-- title: Google
-  title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
+- title: Cancer Dependency Map, Broad Institute of MIT and Harvard
+  title-url: https://depmap.org
+  date: July 2019 - April 2022
+  subtitle: Computational Associate I/II
   tags:
-    - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
-  timeline-side: right
-
-- title: Super University
-  title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+    - tag: Machine Learning
+    - tag: Cancer Data Science
+    - tag: CRISPR Screens
   timeline-side: left
 
-- title: Facebook
-  title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
-  tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
+- title: Dickinson College
+  title-url: https://www.dickinson.edu/
+  date: 2015 - 2019
+  subtitle: Computational Research Assistant
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
-  date: 2014 - 2017
-  subtitle: B.A. Computer Science
+- title: Dickinson College
+  title-url: https://www.dickinson.edu/
+  date: Sep 2017 - Mar 2019
+  subtitle: Summer Research Assistant
+  tags:
+    - tag: Genetic Algorithms
+    - tag: Artificial Intelligence
+    - tag: Numerical Optimization
   timeline-side: left

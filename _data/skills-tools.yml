@@ -5,32 +5,35 @@
 # - name: Git
 #   weight: 5
 
-- name: Git
-  weight: 5
+- name: Linux
+  weight: 3
 
 - name: Bash
   weight: 3
 
-- name: Scrum
-  weight: 3
-
-- name: Travis CI
+- name: Machine Learning
   weight: 1
 
-- name: Jenkins
-  weight: 1
-
-- name: Chrome DevTools
+- name: Neural Networks
   weight: 2
 
-- name: npm
-  weight: 2
-
-- name: gulp
+- name: Bioinformatics
   weight: 4
 
 - name: VS Code
   weight: 3
 
-- name: Postman
-  weight: 4
+- name: RNA Analysis
+  weight: 3
+
+- name: CRISPR Screens
+  weight: 3
+
+- name: PCR
+  weight: 2
+
+- name: Molecular Cloning
+  weight: 2
+
+- name: Tissue Culture
+  weight: 2

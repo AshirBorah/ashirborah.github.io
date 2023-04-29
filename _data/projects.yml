@@ -13,21 +13,11 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: project X
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- name: Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer
+  descr: "Prognostically relevant RNA expression states exist in pancreatic ductal adenocarcinoma (PDAC), but our understanding of their drivers, stability, and relationship to therapeutic response is limited. To examine these attributes systematically, we profiled metastatic biopsies and matched organoid models at single-cell resolution. In vivo, we identify a new intermediate PDAC transcriptional cell state and uncover distinct site- and state-specific tumor microenvironments (TMEs). Benchmarking models against this reference map, we reveal strong culture-specific biases in cancer cell transcriptional state representation driven by altered TME signals. We restore expression state heterogeneity by adding back in vivo-relevant factors and show plasticity in culture models. Further, we prove that non-genetic modulation of cell state can strongly influence drug responses, uncovering state-specific vulnerabilities. This work provides a broadly applicable framework for aligning cell states across in vivo and ex vivo settings, identifying drivers of transcriptional plasticity and manipulating cell state to target associated vulnerabilities."
+  demo: https://www.sciencedirect.com/science/article/pii/S0092867421013325
   tags:
-    - tag: MongoDB
-    - tag: Express
-    - tag: AngularJS
-    - tag: Node
-
-- name: project Y
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
-  tags:
-    - tag: Python
-    - tag: Django
-
-- name: project Z
-  descr: "You can also set a project without demo link and no tags"
+    - tag: Pancreatic Cancer
+    - tag: Cell States/Drug Response
+    - tag: scRNA-seq
+    - tag: Organoids
