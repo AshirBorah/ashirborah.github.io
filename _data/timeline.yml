@@ -29,7 +29,7 @@
 
 - title: Dickinson College
   title-url: https://www.dickinson.edu/
-  date: 2018 - 2019
+  date: August 2018 - May 2019
   subtitle: Computational Research Assistant
     tags:
     - tag: RNAseq Analysis
@@ -39,7 +39,7 @@
 
 - title: Dickinson College
   title-url: https://www.dickinson.edu/
-  date: Sep 2017 - Mar 2019
+  date: May 2018 - July 2018
   subtitle: Summer Research Assistant
   tags:
     - tag: Genetic Algorithms
@@ -47,12 +47,12 @@
     - tag: Numerical Optimization
   timeline-side: right
 
-- title: Dickinson College
+- title: Uliza
   title-url: https://www.dickinson.edu/
-  date: Sep 2016 - Mar 2019
-  subtitle: Teaching Assistant
+  date: Sep 2016 - Dec 2016
+  subtitle: Machine Learning Developer
   tags:
-    - tag: Computer Algorithms
-    - tag: Data Structures
-    - tag: Calculus
+    - tag: Python
+    - tag: Django
+    - tag: Machine learning
   timeline-side: left
