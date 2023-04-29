@@ -103,10 +103,10 @@ projects:
     forks: true
     # projects: A list of the repository names you want to exclude from the listing.
     projects:
-    # - AshirBorah
-    # - WebDevTests
-    # - yaal
-    # - learn_python_colab
+    - AshirBorah
+    - WebDevTests
+    - yaal
+    - learn_python_colab
 
 
 # GOOGLE-ANALYTICS
