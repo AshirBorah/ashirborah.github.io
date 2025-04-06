@@ -12,6 +12,7 @@
   <div class="hero">
     <h1>Ashir Borah</h1>
     <p>Graduate Researcher in Biological and Medical Informatics at UCSF/Arc Institute</p>
+    <p><span id="typing-text"></span><span class="typing-cursor">|</span></p>
     <div class="scroll-prompt">
       <i class="fas fa-chevron-down"></i>
     </div>
@@ -199,11 +200,7 @@
       <div class="contact-content">
         <div class="contact-item">
           <strong>Email:</strong>
-          <a href="mailto:ashiraseesh@gmail.com">ashiraseesh@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>Phone:</strong>
-          <a href="tel:7174400204">717-440-0204</a>
+          <a href="mailto:ashiraseesh@gmail.com">ashiraseesh [at] gmail.com</a>
         </div>
         <div class="social-links">
           <a href="https://scholar.google.com/citations?user=HztaA54AAAAJ&hl=en" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
@@ -226,11 +223,13 @@
     function checkVisibility() {
       const sections = document.querySelectorAll('section');
       const nav = document.getElementById('mainNav');
+      
       if (window.scrollY > 100) {
         nav.classList.add('visible');
       } else {
         nav.classList.remove('visible');
       }
+      
       sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -239,6 +238,8 @@
         }
       });
     }
+    
+    // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -250,8 +251,54 @@
         });
       });
     });
+    
+    // Event listener for the scroll-prompt arrow
+    document.querySelector('.scroll-prompt').addEventListener('click', function() {
+      const aboutSection = document.getElementById('about');
+      window.scrollTo({
+        top: aboutSection.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    });
+    
     window.addEventListener('scroll', checkVisibility);
     checkVisibility();
+    
+    // Typing animation
+    const typingText = document.getElementById('typing-text');
+    const words = ['virology', 'computational biology', 'functional genomics', 'gene delivery'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 67; // 1.5 times faster (was 100)
+    let pauseDelay = 667; // 1.5 times faster (was 1000)
+    
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 33; // 1.5 times faster (was 50)
+      } else {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 67; // 1.5 times faster (was 100)
+      }
+      
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        typingSpeed = pauseDelay;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      
+      setTimeout(typeEffect, typingSpeed);
+    }
+    
+    // Start the typing animation when page loads
+    window.addEventListener('load', typeEffect);
   </script>
 </body>
 </html>
