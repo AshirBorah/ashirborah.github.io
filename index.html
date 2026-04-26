@@ -3,302 +3,566 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashir Borah | Biological and Medical Informatics & Computational Biology</title>
+  <title>Ashir Borah — Functional Genomics, Virology &amp; AI-Enabled Research Systems</title>
+  <meta name="description" content="Ashir Borah is a PhD candidate at UCSF and the Arc Institute working across functional genomics, virology, computational biology, and AI-enabled research systems — CRISPR screening, host-virus biology, and multi-agent scientific tooling.">
+  <meta name="author" content="Ashir Borah">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ashir Borah — Functional Genomics, Virology & AI-Enabled Research Systems">
+  <meta property="og:description" content="PhD candidate at UCSF and the Arc Institute working across functional genomics, virology, and AI-enabled research systems.">
+  <meta property="og:url" content="https://ashirborah.com">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e4a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23f7f4ed'%3EAB%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Ashir Borah</h1>
-    <p>Graduate Researcher in Biological and Medical Informatics at UCSF/Arc Institute</p>
-    <p><span id="typing-text"></span><span class="typing-cursor">|</span></p>
-    <div class="scroll-prompt">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </div>
 
-  <!-- Navigation -->
-  <nav id="mainNav">
-    <div class="container">
-      <div class="nav-container">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+  <header class="hero">
+    <nav id="mainNav" class="nav">
+      <div class="nav-inner">
+        <a href="#top" class="nav-mark" aria-label="Ashir Borah">AB</a>
+        <div class="nav-links">
+          <a href="/writing/">Writing</a>
+          <a href="/cv/">CV</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About</h2>
-      <div class="about-content">
-        <p>
-          I am a Graduate Researcher in Biological and Medical Informatics at the University of California San Francisco/Arc Institute,
-          working in the Luke Gilbert and Brian Hie labs. My work integrates computational analysis of genome-scale CRISPR data with
-          experimental biology to identify novel therapeutic targets in cancer. Previously, I served as a Computational Associate at the 
-          Broad Institute of MIT and Harvard, contributing to cancer data science and the Dependency Map Project.
+    <div id="top" class="hero-inner">
+      <p class="eyebrow">UCSF · Arc Institute</p>
+      <h1 class="hero-name">Ashir Borah</h1>
+      <p class="hero-tagline">
+        PhD candidate at UCSF and the Arc Institute, working across functional genomics,
+        virology, and AI-enabled research systems.
+      </p>
+      <p class="hero-typing">
+        <span class="hero-typing-prefix">Currently exploring</span>
+        <span id="typing-text"></span><span class="typing-cursor">|</span>
+      </p>
+    </div>
+
+    <button class="scroll-prompt" aria-label="Scroll to next section">
+      <i class="fas fa-arrow-down"></i>
+    </button>
+  </header>
+
+  <main>
+
+    <section id="currently">
+      <div class="container container-prose">
+        <p class="eyebrow">Currently <time class="eyebrow-time">· April 2026</time></p>
+        <ul class="now-list">
+          <li><span class="now-verb">Building</span> agentic systems for scientific discovery and analysis.</li>
+          <li><span class="now-verb">Running</span> screens to discover protein function.</li>
+          <li><span class="now-verb">Reading</span> to build new biological systems.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="writing-teaser">
+      <div class="container container-prose">
+        <p class="eyebrow">Writing</p>
+        <ol id="home-post-list" class="post-list post-list-compact" aria-label="Latest posts">
+          <li class="post-loading">Loading…</li>
+        </ol>
+        <p class="see-more">
+          <a href="/writing/">All writing →</a>
         </p>
-        <p>
-          I earned my B.S. in Mathematics and Computer Science from Dickinson College, graduating Magna Cum Laude and Phi Beta Kappa.
-          My interdisciplinary expertise spans computational biology, machine learning, and functional genomics.
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h2>Biology, computation, and the tools to connect them.</h2>
+        <div class="about-content">
+          <p>
+            I'm a PhD candidate in the Biological and Medical Informatics program at UCSF, jointly
+            mentored by <a href="https://www.gilbertlabucsf.com/" target="_blank" rel="noopener">Luke Gilbert</a>
+            and <a href="https://www.brianhie.com/" target="_blank" rel="noopener">Brian Hie</a> at the
+            Arc Institute. My research sits at the intersection of functional genomics, virology, and
+            computational biology — combining CRISPR-based screening, assay development, and high-dimensional
+            data analysis to study gene regulation, host–virus interactions, and disease mechanisms.
+          </p>
+          <p>
+            In parallel, I build AI-enabled research systems — LLM-based councils, research agents, APIs,
+            and multi-agent workflows that support literature synthesis, hypothesis generation, experimental
+            planning, and scientific reasoning.
+          </p>
+          <p>
+            Before UCSF I spent nearly three years at the Broad Institute on the
+            <a href="https://depmap.org" target="_blank" rel="noopener">Cancer Dependency Map</a>, using
+            statistical modeling and machine learning on genome-scale perturbation data to discover and
+            validate cancer targets. I studied Mathematics and Computer Science at Dickinson College,
+            graduating Magna Cum Laude and Phi Beta Kappa.
+          </p>
+          <p class="about-mission">
+            I'm especially drawn to problems where strong experimental design, thoughtful computation,
+            and well-built tooling reveal biology that's otherwise difficult to measure.
+          </p>
+        </div>
+        <ul class="tag-row" aria-label="Areas of interest">
+          <li>CRISPR screens</li>
+          <li>Functional genomics</li>
+          <li>Virology</li>
+          <li>Host–virus biology</li>
+          <li>Perturb-seq</li>
+          <li>Machine learning</li>
+          <li>LLM agents</li>
+          <li>Research tooling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <p class="eyebrow">Research</p>
+        <h2>What I work on.</h2>
+        <div class="research-items">
+          <article class="research-item">
+            <span class="research-num">01</span>
+            <div>
+              <h3>CRISPR functional genomics</h3>
+              <p>
+                Designing and analyzing genome-scale CRISPR screens — knockout, interference, and Perturb-seq —
+                to study gene regulation, dissect the programs that emerge when cells are pushed off-equilibrium,
+                and identify therapeutic vulnerabilities.
+              </p>
+            </div>
+          </article>
+          <article class="research-item">
+            <span class="research-num">02</span>
+            <div>
+              <h3>Virology &amp; host–virus biology</h3>
+              <p>
+                Building assay platforms and perturbation systems for studying virus–cell interactions and the
+                molecular logic of infection — pairing screens with high-dimensional readouts to map the host
+                factors that shape viral life cycles.
+              </p>
+            </div>
+          </article>
+          <article class="research-item">
+            <span class="research-num">03</span>
+            <div>
+              <h3>AI-enabled research systems</h3>
+              <p>
+                LLM-based councils, research agents, APIs, and multi-agent workflows that support literature
+                synthesis, hypothesis generation, experimental planning, and scientific reasoning — building
+                tooling that compounds rather than replaces a researcher's judgment.
+              </p>
+            </div>
+          </article>
+          <article class="research-item">
+            <span class="research-num">04</span>
+            <div>
+              <h3>Computational ↔ experimental loops</h3>
+              <p>
+                Closing the loop between computational predictions and bench validation — cell culture,
+                cloning, and arrayed follow-ups — so that targets discovered in silico are stress-tested
+                against the messiness of real biology.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <p class="eyebrow">Publications</p>
+        <h2>Selected work.</h2>
+        <p class="metrics" aria-label="Citation metrics">
+          <span><strong>1,125</strong> citations</span>
+          <span class="metrics-dot">·</span>
+          <span>h-index <strong>10</strong></span>
+          <span class="metrics-dot">·</span>
+          <span>i10-index <strong>10</strong></span>
+          <a class="metrics-link" href="https://scholar.google.com/citations?user=HztaA54AAAAJ&amp;hl=en" target="_blank" rel="noopener">View on Scholar →</a>
+        </p>
+
+        <ol class="pub-list">
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=SKI+complex+loss+renders+9p21.3-deleted+or+MSI-H+cancers+dependent+on+PELO" target="_blank" rel="noopener">
+              SKI complex loss renders 9p21.3-deleted or MSI-H cancers dependent on PELO
+            </a>
+            <div class="publication-authors">
+              P.C. Borck, I. Boyle, K. Jankovic, N. Bick, K. Foster, A.C. Lau, L.I. Parker-Burns, …, <strong>A.A. Borah</strong>, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Nature</span>
+              <span class="year">2025</span>
+              <span class="cites">Cited by 22</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Integrated+epigenetic+and+genetic+programming+of+primary+human+T+cells" target="_blank" rel="noopener">
+              Integrated epigenetic and genetic programming of primary human T cells
+            </a>
+            <div class="publication-authors">
+              L. Goudy, A. Ha, <strong>A.A. Borah</strong>, J.M. Umhoefer, L. Chow, C. Tran, A. Winters, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Nature Biotechnology</span>
+              <span class="year">2025</span>
+              <span class="cites">Cited by 17</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=A+systematic+search+for+RNA+structural+switches+across+the+human+transcriptome" target="_blank" rel="noopener">
+              A systematic search for RNA structural switches across the human transcriptome
+            </a>
+            <div class="publication-authors">
+              M. Khoroshkin, D. Asarnow, S. Zhou, A. Navickas, A. Winters, J. Goudreau, …, <strong>A.A. Borah</strong>, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Nature Methods</span>
+              <span class="year">2024</span>
+              <span class="cites">Cited by 18</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=In+vivo+perturb-seq+of+cancer+and+microenvironment+cells+dissects+oncologic+drivers+and+radiotherapy+responses+in+glioblastoma" target="_blank" rel="noopener">
+              In vivo Perturb-seq of cancer and microenvironment cells dissects oncologic drivers and radiotherapy responses in glioblastoma
+            </a>
+            <div class="publication-authors">
+              S.J. Liu, C. Zou, J. Pak, A. Morse, D. Pang, T. Casey-Clyde, <strong>A.A. Borah</strong>, D. Wu, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Genome Biology</span>
+              <span class="year">2024</span>
+              <span class="cites">Cited by 18</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Lineage-specific+canonical+and+non-canonical+activity+of+EZH2+in+advanced+prostate+cancer+subtypes" target="_blank" rel="noopener">
+              Lineage-specific canonical and non-canonical activity of EZH2 in advanced prostate cancer subtypes
+            </a>
+            <div class="publication-authors">
+              V.B. Venkadakrishnan, A.G. Presser, R. Singh, M.A. Booker, N.A. Traphagen, …, <strong>A.A. Borah</strong>, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Nature Communications</span>
+              <span class="year">2024</span>
+              <span class="cites">Cited by 66</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=A+ubiquitination+cascade+regulating+the+integrated+stress+response+and+survival+in+carcinomas" target="_blank" rel="noopener">
+              A ubiquitination cascade regulating the integrated stress response and survival in carcinomas
+            </a>
+            <div class="publication-authors">
+              L.D. Cervia, T. Shibue, <strong>A.A. Borah</strong>, B. Gaeta, L. He, L. Leung, N. Li, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Cancer Discovery</span>
+              <span class="year">2023</span>
+              <span class="cites">Cited by 66</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Partial+gene+suppression+improves+identification+of+cancer+vulnerabilities+when+CRISPR-Cas9+knockout+is+pan-lethal" target="_blank" rel="noopener">
+              Partial gene suppression improves identification of cancer vulnerabilities when CRISPR-Cas9 knockout is pan-lethal
+            </a>
+            <div class="publication-authors">
+              J.M. Krill-Burger, J.M. Dempster, <strong>A.A. Borah</strong>, B.R. Paolella, D.E. Root, T.R. Golub, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Genome Biology</span>
+              <span class="year">2023</span>
+              <span class="cites">Cited by 39</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Sparse+dictionary+learning+recovers+pleiotropy+from+human+cell+fitness+screens" target="_blank" rel="noopener">
+              Sparse dictionary learning recovers pleiotropy from human cell fitness screens
+            </a>
+            <div class="publication-authors">
+              J. Pan, J.J. Kwon, J.A. Talamas, <strong>A.A. Borah</strong>, F. Vazquez, J.S. Boehm, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Cell Systems</span>
+              <span class="year">2022</span>
+              <span class="cites">Cited by 43</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Microenvironment+drives+cell+state+plasticity+and+drug+response+in+pancreatic+cancer" target="_blank" rel="noopener">
+              Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer
+            </a>
+            <div class="publication-authors">
+              S. Raghavan, P.S. Winter, A.W. Navia, H.L. Williams, A. DenAdel, K.E. Lowder, …, <strong>A.A. Borah</strong>, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Cell</span>
+              <span class="year">2021</span>
+              <span class="cites">Cited by 611</span>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <a class="publication-title" href="https://scholar.google.com/scholar?q=Repeat+expansions+confer+WRN+dependence+in+microsatellite-unstable+cancers" target="_blank" rel="noopener">
+              Repeat expansions confer WRN dependence in microsatellite-unstable cancers
+            </a>
+            <div class="publication-authors">
+              N. van Wietmarschen, S. Sridharan, W.J. Nathan, A. Tubbs, E.M. Chan, …, <strong>A.A. Borah</strong>, et al.
+            </div>
+            <div class="publication-meta">
+              <span class="venue">Nature</span>
+              <span class="year">2020</span>
+              <span class="cites">Cited by 204</span>
+            </div>
+          </li>
+
+        </ol>
+
+        <p class="pub-footer">
+          <a href="https://scholar.google.com/citations?user=HztaA54AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            See the full list on Google Scholar →
+          </a>
         </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Research Section -->
-  <section id="research">
-    <div class="container">
-      <h2>Research Focus</h2>
-      <div class="research-items">
-        <div class="research-item">
-          <h3>CRISPR Data Analysis &amp; Computational Genomics</h3>
-          <p>
-            Conducting large-scale computational analysis on CRISPR screens to uncover novel cancer vulnerabilities and therapeutic targets.
-          </p>
-        </div>
-        <div class="research-item">
-          <h3>Cancer Data Science</h3>
-          <p>
-            Integrating machine learning with genomic data to model genetic dependencies and biomarkers in cancer.
-          </p>
-        </div>
-        <div class="research-item">
-          <h3>Experimental &amp; Computational Integration</h3>
-          <p>
-            Merging computational predictions with laboratory validation, including cell culture and molecular cloning experiments.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="experience">
+      <div class="container">
+        <p class="eyebrow">Experience</p>
+        <h2>Education &amp; positions.</h2>
 
-  <!-- Publications Section -->
-  <section id="publications">
-    <div class="container">
-      <h2>Selected Publications</h2>
-      <div class="publication-item">
-        <div class="publication-title">
-          The tumor microenvironment drives transcriptional phenotypes and their plasticity in metastatic pancreatic cancer
-        </div>
-        <div class="publication-authors">
-          S. Raghavan, P.S. Winter, A.W. Navia, H.L. Williams, A. DenAdel, R.L. Kalekar, …, A.A. Borah, et al.
-        </div>
-        <div class="publication-meta">
-          <span class="publication-journal">Cell</span> · 
-          <span class="publication-year">2021</span> · Accepted
-        </div>
-      </div>
-      <div class="publication-item">
-        <div class="publication-title">
-          Repeat expansions confer WRN dependence in microsatellite-unstable cancers
-        </div>
-        <div class="publication-authors">
-          N. van Wietmarschen, S. Sridharan, W.J. Nathan, A. Tubbs, E.M. Chan, …, A.A. Borah, et al.
-        </div>
-        <div class="publication-meta">
-          <span class="publication-journal">Nature</span> · 
-          <span class="publication-year">2020</span>
-        </div>
-      </div>
-      <div class="publication-item">
-        <div class="publication-title">
-          Sparse dictionary learning recovers pleiotropy from human cell fitness screens
-        </div>
-        <div class="publication-authors">
-          J. Pan, J.J. Kwon, J.A. Talamas, A.A. Borah, F. Vazquez, J.S. Boehm, et al.
-        </div>
-        <div class="publication-meta">
-          <span class="publication-journal">Cell Systems</span> · Under Revision
-        </div>
-      </div>
-      <div class="publication-item">
-        <div class="publication-title">
-          A ubiquitination cascade regulates the integrated stress response and epithelial cancer survival
-        </div>
-        <div class="publication-authors">
-          L.D. Cervia, T. Shibue, B. Gaeta, A.A. Borah, L. Leung, N. Li, et al.
-        </div>
-        <div class="publication-meta">
-          <span class="publication-journal">Cancer Discovery</span> · Under Revision
-        </div>
-      </div>
-      <div class="publication-item">
-        <div class="publication-title">
-          Partial gene suppression improves identification of cancer vulnerabilities when CRISPR-Cas9 knockout is pan-lethal
-        </div>
-        <div class="publication-authors">
-          J.M. Krill-Burger, J.M. Dempster, A.A. Borah, et al.
-        </div>
-        <div class="publication-meta">
-          Under Preparation
-        </div>
-      </div>
-    </div>
-  </section>
+        <ol class="timeline">
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="container">
-      <h2>Education &amp; Experience</h2>
-      
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3 class="timeline-title">University of California San Francisco / Arc Institute</h3>
-          <span class="timeline-period">2022 - Present</span>
-        </div>
-        <div class="timeline-subtitle">Graduate Researcher, Biological and Medical Informatics</div>
-        <div class="timeline-description">
-          <ul>
-            <li>Conduct computational analysis on genome-scale CRISPR data to identify novel therapeutic targets</li>
-            <li>Integrate experimental validation through cell culture and molecular cloning</li>
-            <li>Collaborate in multidisciplinary research with Luke Gilbert and Brian Hie labs</li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Arc Institute</h3>
+                <span class="timeline-period">Jun 2023 — Present</span>
+              </div>
+              <div class="timeline-subtitle">PhD Researcher · Palo Alto, CA</div>
+              <ul class="timeline-points">
+                <li>Designing experimental and computational methods for functional genomics and virology.</li>
+                <li>Building CRISPR-based screening and perturbation systems to study gene regulation, host–virus biology, and disease mechanisms.</li>
+                <li>Developing assay platforms and analysis workflows for high-dimensional genomic datasets.</li>
+                <li>Building AI-enabled scientific tooling — LLM councils, APIs, and multi-agent workflows for literature synthesis, hypothesis generation, and experimental planning.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <h3 class="timeline-title">University of California, San Francisco</h3>
+                <span class="timeline-period">Sep 2022 — Present</span>
+              </div>
+              <div class="timeline-subtitle">PhD Candidate · Biological and Medical Informatics · San Francisco, CA</div>
+              <ul class="timeline-points">
+                <li>PhD research in functional genomics, virology, and computational biology, in collaboration with the Arc Institute.</li>
+                <li>Developing computational and experimental approaches for studying gene regulation, perturbation biology, and disease mechanisms.</li>
+                <li>Analyzing large-scale biological datasets with statistical, machine learning, and high-dimensional methods.</li>
+                <li>Led an R bootcamp for postdocs and clinicians — 100+ trainees.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Broad Institute of MIT and Harvard</h3>
+                <span class="timeline-period">Jul 2019 — Apr 2022</span>
+              </div>
+              <div class="timeline-subtitle">Computational Associate I &amp; II · Cancer Data Science · Dependency Map Project · Cambridge, MA</div>
+              <ul class="timeline-points">
+                <li>Validated candidate cancer targets identified through genome-scale CRISPR knockout screens.</li>
+                <li>Applied machine learning and statistical methods to identify vulnerabilities in cancer cell lines, with a focus on GI cancers.</li>
+                <li>Prioritized candidate dependencies for downstream therapeutic investigation.</li>
+                <li>Contributed to an open-source ML platform modeling genetic-knockout dependency profiles across &gt;100,000 genomic features.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Uliza</h3>
+                <span class="timeline-period">Sep — Dec 2017</span>
+              </div>
+              <div class="timeline-subtitle">Machine Learning Developer</div>
+              <ul class="timeline-points">
+                <li>Built ML-driven systems to support crowdsourced workflow automation.</li>
+                <li>Helped set up core technical infrastructure — server management, database optimization, and disaster recovery.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Dickinson College</h3>
+                <span class="timeline-period">2015 — 2019</span>
+              </div>
+              <div class="timeline-subtitle">B.S. Mathematics &amp; Computer Science · Magna Cum Laude · Phi Beta Kappa · Carlisle, PA</div>
+              <ul class="timeline-points">
+                <li>Student research project on secure CoAP-DTLS systems for resource-constrained devices.</li>
+                <li>Best Poster, All-College Science Symposium (2019).</li>
+                <li>Teaching assistant for Introduction to Java and Data Structures; tutoring and residential leadership roles.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+
+        <div class="honors">
+          <p class="eyebrow">Selected honors</p>
+          <ul class="honors-list">
+            <li><strong>Spot Award (×2)</strong>, Broad Institute · 2020, 2021</li>
+            <li><strong>Phi Beta Kappa</strong> Honor Society · 2019</li>
+            <li><strong>Best Poster</strong>, All-College Science Symposium · 2019</li>
+            <li><strong>Richard Howland Memorial Scholarship</strong> · sole CS recipient · 2018</li>
+            <li><strong>Pi Mu Epsilon</strong> (Mathematics) &amp; <strong>Upsilon Pi Epsilon</strong> (CS) · 2018</li>
+            <li><strong>Jane Hill Prize</strong> in Computer Science · 2016</li>
+            <li><strong>Torchbearer Award</strong>, Bhumi · 6 of 8,000 volunteers · 2015</li>
           </ul>
         </div>
       </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3 class="timeline-title">Broad Institute of MIT and Harvard</h3>
-          <span class="timeline-period">2019 - 2022</span>
-        </div>
-        <div class="timeline-subtitle">Computational Associate I &amp; II, Cancer Data Science</div>
-        <div class="timeline-description">
-          <ul>
-            <li>Led computational efforts to validate therapeutic genetic targets and identify biomarkers</li>
-            <li>Developed strategies for discovering targets from genome-scale screens</li>
-            <li>Contributed to an open-source machine learning platform modeling genetic knockout dependency profiles</li>
-            <li>Modeled latent variables from CRISPR-Cas9 screens, resulting in key publications</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3 class="timeline-title">Dickinson College</h3>
-          <span class="timeline-period">Graduated 2019</span>
-        </div>
-        <div class="timeline-subtitle">B.S. Mathematics and Computer Science, Magna Cum Laude, Phi Beta Kappa</div>
-        <div class="timeline-description">
-          <ul>
-            <li>Conducted computational research on leukemia cell lines</li>
-            <li>Earned several academic honors and participated in multiple research projects</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-content">
-        <div class="contact-item">
-          <strong>Email:</strong>
-          <a href="mailto:ashiraseesh@gmail.com">ashiraseesh [at] gmail.com</a>
+    <section id="contact">
+      <div class="container container-prose">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch.</h2>
+        <p class="contact-blurb">
+          Happy to talk about CRISPR screens, virology, AI tooling for science, or graduate
+          life at UCSF and the Arc Institute. The fastest route is email.
+        </p>
+        <p class="contact-email">
+          <a id="email-link" href="#" data-user="ashiraseesh" data-domain="gmail.com">
+            email me
+          </a>
+        </p>
+        <div class="social-links" aria-label="Profiles">
+          <a href="https://scholar.google.com/citations?user=HztaA54AAAAJ&amp;hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://in.linkedin.com/in/ashirborah" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/AshirBorah" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
         </div>
-        <div class="social-links">
-          <a href="https://scholar.google.com/citations?user=HztaA54AAAAJ&hl=en" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-          <a href="https://in.linkedin.com/in/ashirborah" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/AshirBorah" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
+        <p class="languages" aria-label="Languages">
+          <span class="languages-label">Languages</span>
+          <span>English <em>(native)</em></span>
+          <span class="lang-dot">·</span>
+          <span>Hindi <em>(professional)</em></span>
+          <span class="lang-dot">·</span>
+          <span>Assamese <em>(conversational)</em></span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
   <footer>
     <div class="container">
-      <p>&copy; 2023 Ashir Borah</p>
+      <p>&copy; <span id="year"></span> Ashir Borah · Built in San Francisco</p>
     </div>
   </footer>
 
   <script>
-    // Scroll reveal effect
-    function checkVisibility() {
-      const sections = document.querySelectorAll('section');
-      const nav = document.getElementById('mainNav');
-      
-      if (window.scrollY > 100) {
-        nav.classList.add('visible');
-      } else {
-        nav.classList.remove('visible');
-      }
-      
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (sectionTop < windowHeight - 100) {
-          section.classList.add('visible');
-        }
-      });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const emailLink = document.getElementById('email-link');
+    if (emailLink) {
+      const addr = emailLink.dataset.user + '@' + emailLink.dataset.domain;
+      emailLink.href = 'mailto:' + addr;
+      emailLink.textContent = addr;
     }
-    
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+
+    const nav = document.getElementById('mainNav');
+    const hero = document.querySelector('.hero');
+
+    function onScroll() {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      nav.classList.toggle('scrolled', heroBottom < 80);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length < 2) return;
+        const el = document.querySelector(id);
+        if (!el) return;
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
       });
     });
-    
-    // Event listener for the scroll-prompt arrow
-    document.querySelector('.scroll-prompt').addEventListener('click', function() {
-      const aboutSection = document.getElementById('about');
-      window.scrollTo({
-        top: aboutSection.offsetTop - 80,
-        behavior: 'smooth'
-      });
+
+    document.querySelector('.scroll-prompt').addEventListener('click', () => {
+      document.getElementById('currently').scrollIntoView({ behavior: 'smooth' });
     });
-    
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
-    
-    // Typing animation
-    const typingText = document.getElementById('typing-text');
-    const words = ['virology', 'computational biology', 'functional genomics', 'gene delivery'];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 67; // 1.5 times faster (was 100)
-    let pauseDelay = 667; // 1.5 times faster (was 1000)
-    
-    function typeEffect() {
-      const currentWord = words[wordIndex];
-      
-      if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 33; // 1.5 times faster (was 50)
-      } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 67; // 1.5 times faster (was 100)
+
+    (async function loadHomeWriting() {
+      const list = document.getElementById('home-post-list');
+      if (!list) return;
+      try {
+        const res = await fetch('/writing/posts.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('manifest fetch failed');
+        const posts = await res.json();
+        if (!posts.length) {
+          list.innerHTML = '<li class="post-empty">First post coming soon.</li>';
+          return;
+        }
+        posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+        const fmt = d => {
+          if (!d) return '';
+          const date = new Date(d + 'T00:00:00');
+          return isNaN(date) ? d : date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        };
+        list.innerHTML = posts.slice(0, 3).map(p => `
+          <li class="post-item">
+            <a href="/writing/?p=${encodeURIComponent(p.slug)}" class="post-item-link">
+              <h3 class="post-item-title">${escapeHtml(p.title || p.slug)}</h3>
+              ${p.summary ? `<p class="post-item-summary">${escapeHtml(p.summary)}</p>` : ''}
+              <time class="post-item-date" datetime="${escapeHtml(p.date || '')}">${fmt(p.date)}</time>
+            </a>
+          </li>
+        `).join('');
+      } catch (err) {
+        console.error(err);
+        list.innerHTML = '<li class="post-empty"><a href="/writing/">Visit writing →</a></li>';
       }
-      
-      if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        typingSpeed = pauseDelay;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-      
-      setTimeout(typeEffect, typingSpeed);
+    })();
+
+    const typingEl = document.getElementById('typing-text');
+    const words = ['CRISPR functional genomics', 'virology', 'host–virus biology', 'LLM research agents', 'multi-agent workflows', 'Perturb-seq'];
+    let wi = 0, ci = 0, deleting = false;
+    function tick() {
+      const w = words[wi];
+      typingEl.textContent = w.slice(0, ci);
+      let delay = deleting ? 30 : 70;
+      if (!deleting && ci === w.length) { deleting = true; delay = 1400; }
+      else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 250; }
+      else { ci += deleting ? -1 : 1; }
+      setTimeout(tick, delay);
     }
-    
-    // Start the typing animation when page loads
-    window.addEventListener('load', typeEffect);
+    window.addEventListener('load', tick);
   </script>
 </body>
 </html>

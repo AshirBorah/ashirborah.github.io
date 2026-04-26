@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Ashir Borah</title>
+  <meta name="description" content="Notes, thoughts, and longer-form writing by Ashir Borah on functional genomics, virology, and AI for science.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e4a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23f7f4ed'%3EAB%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-light.min.css" id="hljs-light">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css" id="hljs-dark" disabled>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="nav nav-static">
+    <div class="nav-inner">
+      <a href="/" class="nav-mark" aria-label="Home">AB</a>
+      <div class="nav-links">
+        <a href="/writing/" class="active">Writing</a>
+        <a href="/cv/">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="writing-page">
+
+    <div id="list-view" class="container container-prose">
+      <p class="eyebrow">Writing</p>
+      <h1 class="writing-h1">Notes, half-thoughts, and the occasional rant.</h1>
+      <p class="writing-lede">
+        Mostly about functional genomics, AI tooling for science, and whatever I'm reading.
+        Updated when I've got something to say — not on a schedule.
+      </p>
+      <ol id="post-list" class="post-list" aria-label="Posts">
+        <li class="post-loading">Loading…</li>
+      </ol>
+    </div>
+
+    <article id="post-view" hidden class="container container-prose">
+      <a href="/writing/" class="post-back">← All writing</a>
+      <header class="post-header">
+        <p class="eyebrow"><time id="post-date"></time></p>
+        <h1 id="post-title" class="post-title"></h1>
+      </header>
+      <div id="post-body" class="post-body markdown"></div>
+      <p class="post-back-bottom">
+        <a href="/writing/">← Back to all writing</a>
+      </p>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ashir Borah · <a href="/">Home</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.getElementById('hljs-light').disabled = true;
+      document.getElementById('hljs-dark').disabled = false;
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+    }
+
+    function formatDate(d) {
+      if (!d) return '';
+      const date = new Date(d + 'T00:00:00');
+      if (isNaN(date)) return d;
+      return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function parseFrontmatter(md) {
+      const m = md.match(/^---\r?\n([\s\S]+?)\r?\n---\r?\n([\s\S]*)$/);
+      if (!m) return { meta: {}, body: md };
+      const meta = {};
+      m[1].split(/\r?\n/).forEach(line => {
+        const idx = line.indexOf(':');
+        if (idx <= 0) return;
+        let v = line.slice(idx + 1).trim();
+        if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+          v = v.slice(1, -1);
+        }
+        meta[line.slice(0, idx).trim()] = v;
+      });
+      return { meta, body: m[2].trim() };
+    }
+
+    async function loadIndex() {
+      const list = document.getElementById('post-list');
+      try {
+        const res = await fetch('posts.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('manifest fetch failed: ' + res.status);
+        const posts = await res.json();
+        if (!posts.length) {
+          list.innerHTML = '<li class="post-empty">No posts yet — check back soon.</li>';
+          return;
+        }
+        posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        list.innerHTML = posts.map(p => `
+          <li class="post-item">
+            <a href="?p=${encodeURIComponent(p.slug)}" class="post-item-link">
+              <h2 class="post-item-title">${escapeHtml(p.title || p.slug)}</h2>
+              ${p.summary ? `<p class="post-item-summary">${escapeHtml(p.summary)}</p>` : ''}
+              <time class="post-item-date" datetime="${escapeHtml(p.date || '')}">${formatDate(p.date)}</time>
+            </a>
+          </li>
+        `).join('');
+      } catch (err) {
+        console.error(err);
+        list.innerHTML = '<li class="post-empty">Couldn\'t load posts. Check back later.</li>';
+      }
+    }
+
+    async function loadPost(slug) {
+      const titleEl = document.getElementById('post-title');
+      const dateEl = document.getElementById('post-date');
+      const bodyEl = document.getElementById('post-body');
+
+      try {
+        const res = await fetch(`posts/${slug}.md`, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('post not found');
+        const text = await res.text();
+        const { meta, body } = parseFrontmatter(text);
+
+        titleEl.textContent = meta.title || slug;
+        dateEl.textContent = formatDate(meta.date);
+        if (meta.date) dateEl.setAttribute('datetime', meta.date);
+        document.title = `${meta.title || slug} — Ashir Borah`;
+
+        marked.setOptions({
+          gfm: true,
+          breaks: false,
+          headerIds: true,
+          mangle: false,
+          highlight(code, lang) {
+            try {
+              if (lang && hljs.getLanguage(lang)) {
+                return hljs.highlight(code, { language: lang, ignoreIllegals: true }).value;
+              }
+              return hljs.highlightAuto(code).value;
+            } catch (_) {
+              return escapeHtml(code);
+            }
+          }
+        });
+
+        bodyEl.innerHTML = marked.parse(body);
+
+        bodyEl.querySelectorAll('a').forEach(a => {
+          const href = a.getAttribute('href') || '';
+          if (/^https?:\/\//.test(href) && !href.includes(location.host)) {
+            a.target = '_blank';
+            a.rel = 'noopener';
+          }
+        });
+      } catch (err) {
+        console.error(err);
+        titleEl.textContent = 'Post not found';
+        bodyEl.innerHTML = `<p>I couldn't load that post. <a href="/writing/">Back to writing</a>.</p>`;
+      }
+    }
+
+    const params = new URLSearchParams(location.search);
+    const slug = params.get('p');
+    if (slug) {
+      document.getElementById('list-view').hidden = true;
+      document.getElementById('post-view').hidden = false;
+      loadPost(slug);
+    } else {
+      loadIndex();
+    }
+  </script>
+</body>
+</html>
