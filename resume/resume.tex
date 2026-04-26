@@ -1,0 +1,164 @@
+%-------------------------
+% Ashir Borah — 1-page Industry Resume
+% Companion to cv.tex; same author, condensed for industry/general use.
+% Build: `make resume` → ../docs/Ashir-Borah-Resume.pdf
+%-------------------------
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+% margins — tighter than CV to fit on one page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+%-------------------------
+\newcommand{\me}{\textbf{A.A.~Borah}}
+\newcommand{\etal}{\textit{et~al}}
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-3pt}}}
+
+\newcommand{\rHeading}[4]{%
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\sectionList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\sectionListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\bullets}{\begin{itemize}[itemsep=-1pt, topsep=2pt]}
+\newcommand{\bulletsEnd}{\end{itemize}\vspace{-6pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%======================================
+\begin{document}
+
+%-------------------------
+% Header
+%-------------------------
+\begin{center}
+    {\LARGE \scshape Ashir A. Borah} \\ \vspace{2pt}
+    \small
+    San Francisco, CA \;|\;
+    \href{mailto:ashirb@arcinstitute.org}{ashirb@arcinstitute.org} \;|\;
+    \href{https://ashirborah.com}{ashirborah.com} \;|\;
+    \href{https://orcid.org/0000-0003-1193-4987}{ORCID} \;|\;
+    \href{https://scholar.google.com/citations?user=HztaA54AAAAJ}{Scholar} \;|\;
+    \href{https://github.com/AshirBorah}{GitHub} \;|\;
+    \href{https://www.linkedin.com/in/ashirborah}{LinkedIn}
+\end{center}
+
+\vspace{-6pt}
+\noindent\small
+PhD candidate at UCSF and the Arc Institute. I build CRISPR-based screening systems and AI-enabled research tooling at the intersection of functional genomics, virology, and computational biology --- pairing experimental and computational methods to study gene regulation, host--virus biology, and disease.
+\normalsize
+
+%-------------------------
+% Experience
+%-------------------------
+\section{Experience}
+\sectionList
+
+  \rHeading
+    {Arc Institute --- PhD Researcher (joint with UCSF)}{Jun 2023 -- Present}
+    {Functional genomics, virology, and AI-enabled scientific tooling}{Palo Alto, CA}
+    \bullets
+      \resumeItem{Design CRISPR-based screening systems and Perturb-seq workflows for gene regulation, host--virus biology, and disease mechanisms.}
+      \resumeItem{Build LLM-based research agents, multi-agent workflows, and APIs for literature synthesis, hypothesis generation, and experimental planning.}
+      \resumeItem{Mentor UCSF PhD rotation students (BMI \& Tetrad programs); led UCSF R Bootcamp 2022--2024 --- trained $250+$ postdocs, clinicians, and students.}
+    \bulletsEnd
+
+  \rHeading
+    {Broad Institute of MIT and Harvard --- Computational Associate I \& II}{Jul 2019 -- Apr 2022}
+    {Cancer Dependency Map (DepMap), Cancer Data Science}{Cambridge, MA}
+    \bullets
+      \resumeItem{Validated cancer therapeutic targets from genome-scale CRISPR knockout screens; led GI-cancer target discovery.}
+      \resumeItem{Contributed to open-source ML platform modeling knockout dependency profiles across $>$100{,}000 genomic features.}
+      \resumeItem{Co-authored publications in \textit{Nature}, \textit{Cell}, \textit{Cancer Discovery}, \textit{Cell Systems}, and \textit{Genome Biology}; received Spot Award $\times$2 for going above and beyond.}
+    \bulletsEnd
+
+\sectionListEnd
+
+%-------------------------
+% Education
+%-------------------------
+\section{Education}
+\sectionList
+
+  \rHeading
+    {University of California, San Francisco}{Sep 2022 -- Present}
+    {Ph.D.\ Candidate, Biological and Medical Informatics --- Advisors: Luke Gilbert (Arc), Brian Hie (Stanford/Arc)}{San Francisco, CA}
+
+  \rHeading
+    {Dickinson College}{Aug 2015 -- May 2019}
+    {B.S.\ Mathematics \& Computer Science --- \textit{Magna Cum Laude}, Phi Beta Kappa --- GPA 3.89/4.00}{Carlisle, PA}
+
+\sectionListEnd
+
+%-------------------------
+% Selected Publications
+%-------------------------
+\section{Selected Publications}
+\small
+\noindent
+Borck~P.C., \ldots, \me, \etal.\ \textbf{SKI complex loss renders 9p21.3-deleted or MSI-H cancers dependent on PELO.} \textit{Nature} (2025). \href{https://doi.org/10.1038/s41586-024-08509-3}{doi:10.1038/s41586-024-08509-3} \\[2pt]
+Goudy~L., Ha~A., \me, \etal.\ \textbf{Integrated epigenetic and genetic programming of primary human T cells.} \textit{Nature Biotechnology} (2025). \href{https://doi.org/10.1038/s41587-025-02856-w}{doi:10.1038/s41587-025-02856-w} \\[2pt]
+Khoroshkin~M., \ldots, \me, \etal.\ \textbf{A systematic search for RNA structural switches across the human transcriptome.} \textit{Nature Methods} (2024). \href{https://doi.org/10.1038/s41592-024-02335-1}{doi:10.1038/s41592-024-02335-1} \\[2pt]
+Raghavan~S., \ldots, \me, \etal.\ \textbf{Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer.} \textit{Cell} (2021). \href{https://doi.org/10.1016/j.cell.2021.11.017}{doi:10.1016/j.cell.2021.11.017} \\[2pt]
+van Wietmarschen~N., \ldots, \me, \etal.\ \textbf{Repeat expansions confer WRN dependence in microsatellite-unstable cancers.} \textit{Nature} (2020). \href{https://doi.org/10.1038/s41586-020-2769-8}{doi:10.1038/s41586-020-2769-8} \\[2pt]
+Full list (13 peer-reviewed + 1 preprint + 8 conference abstracts): \href{https://scholar.google.com/citations?user=HztaA54AAAAJ}{Google Scholar}.
+\normalsize
+
+%-------------------------
+% Skills
+%-------------------------
+\section{Skills}
+\small
+\noindent
+\textbf{Functional genomics:} CRISPR screens (knockout / interference / activation), Perturb-seq, scRNA-seq, viral vector design, mammalian cell culture, cloning. \\[2pt]
+\textbf{Single-cell \& ML:} Scanpy, Seurat, Cell~Ranger, scVI, rapids-singlecell (GPU), MAGeCK, PyTorch, JAX. Foundation models for DNA / RNA / protein. \\[2pt]
+\textbf{AI tooling:} LLM agents, multi-agent workflows, retrieval-augmented systems, LangChain, DSPy, scientific APIs, prompt engineering. \\[2pt]
+\textbf{Programming:} Python, R. \;|\; \textbf{Languages:} English (native), Hindi (professional), Assamese (conversational).
+\normalsize
+
+%-------------------------
+% Selected Honors
+%-------------------------
+\section{Selected Honors}
+\small
+\noindent
+Spot Award ($\times$2), Broad Institute (2020, 2021) \;|\;
+Phi Beta Kappa (2019) \;|\;
+Best Poster, Dickinson Science Symposium (2019) \;|\;
+Richard Howland Memorial Scholarship --- sole CS recipient (2018) \;|\;
+Torchbearer Award, Bhumi --- 6 of 8{,}000 volunteers (2015).
+\normalsize
+
+\end{document}
