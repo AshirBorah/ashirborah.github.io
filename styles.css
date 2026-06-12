@@ -369,6 +369,64 @@ h1, h2, h3 {
   max-width: 56ch;
 }
 
+.cv-contact-line {
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.cv-contact-line a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 1px;
+}
+.cv-contact-line a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.cv-contact-line .dot { color: var(--rule); }
+
+/* Download / action buttons */
+.cv-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  background: var(--surface);
+  transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  color: var(--bg);
+  background: color-mix(in srgb, var(--accent) 88%, black);
+  border-color: color-mix(in srgb, var(--accent) 88%, black);
+}
+.btn i { font-size: 0.85em; }
+
 .languages-block {
   margin-top: 3rem;
   padding-top: 2rem;
@@ -587,6 +645,22 @@ main h2 {
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 500;
+}
+
+.pub-group-label {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 2.5rem 0 1.25rem;
+}
+.pub-group-label:first-of-type { margin-top: 0; }
+
+.venue.preprint {
+  color: var(--muted);
+  font-style: italic;
 }
 
 .pub-footer {
@@ -1048,6 +1122,31 @@ footer {
   font-weight: 600;
   color: var(--ink);
   background: var(--accent-soft);
+}
+
+/* ---------- Skills (CV) ---------- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem 2.5rem;
+}
+@media (min-width: 720px) {
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+}
+.skill-group h3 {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.skill-group p {
+  font-size: 0.97rem;
+  color: var(--ink);
+  line-height: 1.6;
 }
 
 /* Active nav link */
