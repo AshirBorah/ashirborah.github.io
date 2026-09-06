@@ -6,6 +6,7 @@
   <title>Ashir Borah — Functional Genomics, Virology &amp; AI-Enabled Research Systems</title>
   <meta name="description" content="Ashir Borah is a PhD candidate at UCSF and the Arc Institute working across functional genomics, virology, computational biology, and AI-enabled research systems — CRISPR screening, host-virus biology, and multi-agent scientific tooling.">
   <meta name="author" content="Ashir Borah">
+  <link rel="canonical" href="https://ashirborah.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ashir Borah — Functional Genomics, Virology & AI-Enabled Research Systems">
@@ -22,6 +23,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="hero">
     <nav id="mainNav" class="nav">
@@ -52,7 +55,7 @@
     </button>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
 
     <section id="currently">
       <div class="container container-prose">
@@ -71,6 +74,9 @@
         <ol id="home-post-list" class="post-list post-list-compact" aria-label="Latest posts">
           <li class="post-loading">Loading…</li>
         </ol>
+        <noscript>
+          <p class="post-empty">Posts are listed with JavaScript — <a href="/writing/">visit writing →</a></p>
+        </noscript>
         <p class="see-more">
           <a href="/writing/">All writing →</a>
         </p>
@@ -450,19 +456,20 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
+    document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');
         if (id.length < 2) return;
         const el = document.querySelector(id);
         if (!el) return;
         e.preventDefault();
-        window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
+        // CSS controls smooth scrolling and honors the reduced-motion preference.
+        window.scrollTo({ top: el.offsetTop - 60 });
       });
     });
 
     document.querySelector('.scroll-prompt').addEventListener('click', () => {
-      document.getElementById('currently').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('currently').scrollIntoView();
     });
 
     (async function loadHomeWriting() {
@@ -510,7 +517,15 @@
       else { ci += deleting ? -1 : 1; }
       setTimeout(tick, delay);
     }
-    window.addEventListener('load', tick);
+    // The CSS reduced-motion block only neutralizes CSS animations, so the typing
+    // loop has to opt out on its own.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      typingEl.textContent = words[0];
+      const cursor = document.querySelector('.typing-cursor');
+      if (cursor) cursor.remove();
+    } else {
+      window.addEventListener('load', tick);
+    }
   </script>
 </body>
 </html>

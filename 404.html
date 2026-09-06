@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not found — Ashir Borah</title>
+  <meta name="description" content="That page doesn't exist.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e4a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23f7f4ed'%3EAB%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="nav nav-static">
+    <div class="nav-inner">
+      <a href="/" class="nav-mark" aria-label="Home">AB</a>
+      <div class="nav-links">
+        <a href="/writing/">Writing</a>
+        <a href="/cv/">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="writing-page">
+    <div class="container container-prose">
+      <p class="eyebrow">404</p>
+      <h1 class="writing-h1">There's nothing here.</h1>
+      <p class="writing-lede">
+        That page has either moved or never existed. Try the
+        <a href="/">homepage</a>, the <a href="/writing/">writing</a>, or the
+        <a href="/cv/">CV</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ashir Borah · <a href="/">Home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

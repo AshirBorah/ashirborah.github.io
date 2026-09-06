@@ -45,7 +45,7 @@ The home page's "Writing" teaser shows the latest 3 posts automatically (also dr
 
 ## Architecture (writing channel)
 
-- **Markdown rendering**: [`marked`](https://marked.js.org/) v12 via jsDelivr CDN — pinned in `writing/index.html`.
+- **Markdown rendering**: [`marked`](https://marked.js.org/) v12.0.2 is vendored in `assets/vendor/marked-12.0.2.min.js`, with its license alongside it. Posts remain readable if the highlighting CDN is unavailable; a formatting failure shows the original Markdown text.
 - **Syntax highlighting**: [`highlight.js`](https://highlightjs.org/) v11.9.0 via jsDelivr CDN. Two stylesheets are loaded (`atom-one-light` and `atom-one-dark`); the JS toggles them based on `prefers-color-scheme`.
 - **Frontmatter parsing**: hand-rolled regex in `writing/index.html` — supports simple `key: value` pairs (with optional surrounding quotes). Don't use nested YAML or arrays in frontmatter.
 - **Routing**: a single `writing/index.html` handles both list view and post view. If `?p=<slug>` is present, it hides the list and fetches `posts/<slug>.md`. Otherwise it fetches `posts.json` and renders the list.

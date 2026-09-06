@@ -349,6 +349,11 @@ h1, h2, h3 {
 
 .cv-page { padding-top: 0; }
 
+.cv-page h2.eyebrow {
+  font-weight: 400;
+  line-height: inherit;
+}
+
 .cv-header {
   padding-top: 5rem;
   padding-bottom: 3.5rem;
@@ -880,11 +885,26 @@ footer {
 /* ---------- Print ---------- */
 
 @media print {
-  .nav, .scroll-prompt, .social-links, .typing-cursor, #typing-text, .hero-typing { display: none; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --ink: #000;
+    --muted: #444;
+    --rule: #ccc;
+    --accent: #1f4e4a;
+    --accent-soft: #f2f2f2;
+  }
+  .nav, .scroll-prompt, .social-links, .typing-cursor, #typing-text, .hero-typing, .skip-link { display: none; }
   body { background: white; color: black; font-size: 11pt; }
   .hero { min-height: auto; }
   main section { page-break-inside: avoid; padding: 1.5rem 0; opacity: 1; transform: none; border-top: 1px solid #ccc; }
   a { color: black; text-decoration: underline; }
+  .btn-primary, .btn-primary:hover { color: var(--ink); background: var(--surface); }
+  .markdown pre code * { color: inherit !important; }
 }
 
 /* ---------- Writing list (index + home teaser) ---------- */
@@ -1093,6 +1113,11 @@ footer {
   font-size: inherit;
 }
 
+.markdown .post-source {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 .markdown hr {
   border: none;
   border-top: 1px solid var(--rule);
@@ -1151,6 +1176,27 @@ footer {
 
 /* Active nav link */
 .nav-links a.active { color: var(--accent); font-weight: 600; }
+
+/* ---------- Skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+main:focus { outline: none; }
 
 /* ---------- Reduced motion ---------- */
 
